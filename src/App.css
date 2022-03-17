@@ -1,38 +1,86 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: #101820ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+.title {
+  font-size: 30px;
+  font-weight: 600;
+  color: #f2aa4cff;
+  letter-spacing: 1px;
+  margin: 30px 0;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todo-list {
+  width: 450px;
+  padding: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background-color: #fff;
+}
+.list-head {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  gap: 20px;
+}
+.entered-list {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+}
+.add-list {
+  border: none;
+  border-radius: 5px;
+  background-color: #101820ff;
+  outline: none;
+  font-size: 16px;
+  color: #f2aa4cff;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.tasks {
+  width: 100%;
+  margin-top: 30px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.item {
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.item p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #111;
+  letter-spacing: 1px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.item.completed p {
+  text-decoration: line-through;
+  color: #11111180;
+}
+.item-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.item-btn i {
+  color: #101820ff;
+  font-size: 18px;
+  cursor: pointer;
 }
