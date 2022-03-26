@@ -5,7 +5,12 @@ function TodoList({ setTodos, todos }) {
   return (
     <div className="tasks">
       {todos.map((todo) => (
-        <TodoItem key={todo.id} setTodos={setTodos} todos={todos} todo={todo} />
+        <TodoItem
+          key={todo.id}
+          id={todo.id}
+          todo={todo.todo}
+          inprogress={todo.inprogress}
+        />
       ))}
     </div>
   );
